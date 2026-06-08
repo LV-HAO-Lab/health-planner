@@ -2,14 +2,14 @@
   "name": "健康计划",
   "short_name": "健康计划",
   "description": "每日饮食与锻炼计划管理",
-  "start_url": "./",
+  "start_url": "/health-planner/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f9fafb",
   "theme_color": "#4CAF50",
   "icons": [
     {
-      "src": "/icons/icon.svg",
+      "src": "/health-planner/icons/icon.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"

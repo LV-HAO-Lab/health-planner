@@ -55,8 +55,8 @@ export function sendNotification(title, options = {}) {
 
   try {
     const opts = {
-      icon: '/icons/icon.svg',
-      badge: '/icons/icon.svg',
+      icon: '/health-planner/icons/icon.svg',
+      badge: '/health-planner/icons/icon.svg',
       tag: 'health-planner',
       ...options,
     }
