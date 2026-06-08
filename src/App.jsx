@@ -115,6 +115,8 @@ export default function App() {
         <DietPlan
           key={selectedDate}
           plan={plan}
+          selectedDate={selectedDate}
+          onDateChange={handleSelectDate}
           templates={dietTemplates.templates}
           settings={settings}
           onToggleMeal={toggleMeal}
@@ -128,6 +130,8 @@ export default function App() {
         <ExercisePlan
           key={selectedDate}
           plan={plan}
+          selectedDate={selectedDate}
+          onDateChange={handleSelectDate}
           templates={exerciseTemplates.templates}
           onToggleExercise={toggleExercise}
           onAddExercise={addExercise}
@@ -151,9 +155,6 @@ export default function App() {
       {/* 底部导航 */}
       <TabBar activeTab={activeTab} onTabChange={(tab) => {
         setActiveTab(tab)
-        if (tab !== 'history') {
-          setSelectedDate(getToday())
-        }
       }} />
 
       {/* 设置弹窗 */}

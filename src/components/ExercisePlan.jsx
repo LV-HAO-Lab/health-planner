@@ -2,9 +2,12 @@ import { useState } from 'react'
 import ExerciseCard from './ExerciseCard'
 import AddExerciseForm from './AddExerciseForm'
 import TemplateSelector from './TemplateSelector'
+import DateNavigator from './DateNavigator'
 
 export default function ExercisePlan({
   plan,
+  selectedDate,
+  onDateChange,
   templates,
   onToggleExercise,
   onAddExercise,
@@ -22,6 +25,9 @@ export default function ExercisePlan({
 
   return (
     <div className="flex-1 overflow-y-auto hide-scrollbar pb-4">
+      {/* 日期选择器 */}
+      <DateNavigator currentDate={selectedDate || plan.date} onDateChange={onDateChange} />
+
       {/* 操作栏 */}
       <div className="mx-4 mt-3 flex gap-2">
         <button
@@ -40,7 +46,7 @@ export default function ExercisePlan({
           onClick={onCopyFromDate}
           className="flex-1 py-2.5 rounded-xl bg-blue-50 text-blue-600 text-sm font-medium hover:bg-blue-100 transition-colors"
         >
-          📋 复制昨天
+          📋 前一天
         </button>
       </div>
 
